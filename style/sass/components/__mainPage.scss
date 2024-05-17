@@ -1,0 +1,47 @@
+body {
+  font-family: Teacher;
+  background-color: $OffWhite;
+}
+.container {
+  padding-top: 10px;
+  padding-left: 80px;
+  background-color: $LightGray;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 100px;
+  &__title {
+    h1 {
+      color: $DarkGray;
+    }
+  }
+  &__content {
+    &__input {
+      input {
+        width: 400px;
+        height: 40px;
+        border: none;
+        border-radius: 15px;
+        padding-left: 20px;
+        font-family: Teacher;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        width: 80px;
+        height: 40px;
+        border-radius: 15px;
+        border: none;
+        background-color: $LightOrange;
+        color: white;
+        margin-left: -80px;
+        font-family: Teacher;
+        &:hover {
+          background-color: $LightGreen;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Teacher;
+  src: url("/style/fonts/Teachers/Teachers-VariableFont_wght.ttf");
+}
+body {
+  font-family: Teacher;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding-top: 10px;
+  padding-left: 80px;
+  background-color: #eeeeee;
+  width: 500px;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+.container__title h1 {
+  color: #424242;
+}
+.container__content__input input {
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  padding-left: 20px;
+  font-family: Teacher;
+}
+.container__content__input input:focus {
+  outline: none;
+}
+.container__content__input button {
+  width: 80px;
+  height: 40px;
+  border-radius: 15px;
+  border: none;
+  background-color: #ffb74d;
+  color: white;
+  margin-left: -80px;
+  font-family: Teacher;
+}
+.container__content__input button:hover {
+  background-color: #a5d6a7;
+}/*# sourceMappingURL=main.css.map */
