@@ -9,18 +9,21 @@ body {
 
 .container {
   padding-top: 10px;
-  padding-left: 80px;
+  padding-bottom: 60px;
   background-color: #eeeeee;
   width: 500px;
-  height: 200px;
   margin: auto;
   border-radius: 10px;
   margin-top: 100px;
 }
-.container__title h1 {
+.container__textInput {
+  margin: auto;
+  width: 430px;
+}
+.container__textInput__title h1 {
   color: #424242;
 }
-.container__content__input input {
+.container__textInput__content__input input {
   width: 400px;
   height: 40px;
   border: none;
@@ -28,12 +31,12 @@ body {
   padding-left: 20px;
   font-family: Teacher;
 }
-.container__content__input input:focus {
+.container__textInput__content__input input:focus {
   outline: none;
 }
-.container__content__input button {
+.container__textInput__content__input button {
   width: 80px;
-  height: 40px;
+  height: 45px;
   border-radius: 15px;
   border: none;
   background-color: #ffb74d;
@@ -41,6 +44,27 @@ body {
   margin-left: -80px;
   font-family: Teacher;
 }
-.container__content__input button:hover {
+.container__textInput__content__input button:hover {
   background-color: #a5d6a7;
+}
+.container__textInput__content__output {
+  margin: auto;
+}
+.container__textInput__content__output__element {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: left;
+  color: #424242;
+  gap: 20px;
+}
+.container__textInput__content__output__element input {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 200px;
+  color: #424242;
 }/*# sourceMappingURL=main.css.map */
