@@ -52,7 +52,7 @@ body {
 }
 .container__textInput__content__output__element {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   align-items: center;
   justify-content: left;
   color: #424242;
@@ -61,6 +61,14 @@ body {
 .container__textInput__content__output__element input {
   width: 20px;
   height: 20px;
+  align-items: center;
+}
+.container__textInput__content__output__element__img {
+  width: 20px;
+  height: 15px;
+}
+.container__textInput__content__output__element__img img {
+  width: 100%;
 }
 
 .footer {
