@@ -5,16 +5,18 @@ const addTask = document.getElementById("add");
 const displayField = document.querySelector(
   ".container__textInput__content__output"
 );
-
+const outputElement = document.querySelector(
+  ".container__textInput__content__output__element"
+);
+// creating an array to store all the data coming from our inputField
 let tasks = [];
-
+// here we get the value from the imput  and return it in a form of text
 function getTheInput(inputValue) {
   const text = inputValue.value.trim();
   return text;
 }
 
-// to get the input
-// function store to an array
+// the value gotten and returned into a text sent to the the array created and return the array
 function saveToArray(theArray) {
   const theInput = getTheInput(inputTab);
   theArray.push(theInput);
@@ -23,11 +25,7 @@ function saveToArray(theArray) {
   return theArray;
 }
 
-//we create a function to get the input from the textfield
-
-// initialising an array to store our tasks
-
-//saving function
+//we create a function to save the value from the input into the array in an automatic way.  and update the local storage.
 function saveToLocalstorage() {
   let savedTasks = saveToArray(tasks);
   for (let i = 0; i < savedTasks.length; i++) {
@@ -40,7 +38,7 @@ function creatAndAppend() {
   for (let i = 0; i < localStorage.length; i++) {
     const newRadio = document.createElement("input");
     const newElement = document.createElement("div");
-    newElement.classList.add("container__textInput__content__output__element");
+    newElement.classList.add(`container__textInput__content__output__element`);
     let theText = document.createElement("p");
 
     const deleteIconClass = document.createElement("div");
@@ -56,13 +54,14 @@ function creatAndAppend() {
     newElement.appendChild(deleteIconClass);
     deleteIconClass.appendChild(deleteIcon);
     theText.innerText = localStorage.getItem(localStorage.key(i));
+    // button to delete the element
+    deleteIcon.addEventListener("click", () => deleteElement(i));
   }
 }
-// function to display the content
+// function to display the content. here we call all the functions. which means save to local storage the data, and append the element.
 
 function displayTask() {
   saveToLocalstorage();
-  console.log(localStorage);
   creatAndAppend();
   // displaying the tasks from the array [Tasks]
 
@@ -70,13 +69,15 @@ function displayTask() {
 }
 // displaying elment
 
-function deleteElement(task, e) {
-  const theTarget = e.target();
-  task.splice(1, 0);
-  console.log(theTarget);
+function deleteElement(selected) {
+  localStorage.removeItem(selected);
+  location.reload();
+  console.log(`element ${selected}`);
 }
-
+// create an event listener and use the displayTask function to be triggered
 addTask.addEventListener("click", () => displayTask());
+
+// call the creatAndAppend function whenever we reload the
 document.addEventListener("DOMContentLoaded", () => {
   creatAndAppend();
   console.log(localStorage);
